@@ -1,0 +1,10 @@
+{
+    "exchange": {
+        "name": "coinex",
+        "key": "B9DF5F3B8CD54EB88498ED416F4DCBB1",
+        "secret": "ED0442B6FF05AF077C836948204940A29719140935F24471",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "markets_refresh_interval": 30
+    }
+}

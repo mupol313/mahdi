@@ -1,0 +1,112 @@
+{
+    "max_open_trades": 3,
+    "startup_candle_count": 300,
+    "db_url": "sqlite:///user_data/database/tradesv3.sqlite",
+    "stake_amount": 0.4,
+    "fee": 0.001,
+    "futures_funding_rate":0.001,
+    "available_capital": 50,
+    "tradable_balance_ratio": 0.9,
+    "timeframe": "5m",
+    "process_only_new_candles": false,
+    "dry_run": true,
+    "cancel_open_orders_on_exit": true,
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "fiat_display_currency": "USD",
+    "stake_currency": "USDT",
+    "amend_last_stake_amount": true,
+    "dry_run_wallet": 100,
+    "initial_state": "running",
+    "dataformat_ohlcv": "json",
+    "dataformat_trades": "json",
+    "force_entry_enable": true,
+    "recursive_strategy_search": true,
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": false,
+        "order_book_top": 1,
+        "price_last_balance": 0.0
+    },
+    "unfilledtimeout": {
+        "entry": 15,
+        "exit": 15,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_exit": "market",
+        "force_entry": "market",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+    },
+    "order_time_in_force": {
+        "entry": "GTC",
+        "exit": "GTC"
+    },
+    "exchange": {
+        "name": "coinex",
+        "key": "B9DF5F3B8CD54EB88498ED416F4DCBB1",
+        "secret": "ED0442B6FF05AF077C836948204940A29719140935F24471",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "markets_refresh_interval": 30,
+        "pair_whitelist": [
+            "ADA/USDT:USDT"
+        ]
+    },
+    "pairlists": [
+        {"method": "StaticPairList"}
+    ],
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.6,
+        "minimum_expectancy": 0.2,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": true,
+        "token": "6304509441:AAHHpT_MTITDpjh01cOwFHYX6R2xAxBz-Wk",
+        "chat_id": "5514429070"
+    },
+    "bot_name": "eagle_eye",
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": true,
+        "jwt_secret_key": "95ee043b07757de739cacb5efffd52089f9a5959f1375b2375128263b6f76432",
+        "ws_token": "6PY_SjxK-LK-NP1bkg3IYIxA7dnrkBOnlA",
+        "CORS_origins": [],
+        "username": "mupol313",
+        "password": "Yamaha.123"
+    },
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 120,
+        "sd_notify": true
+    }
+}
